@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>WEB PAGE Design</title>
+<script>
+function staircase() {
+var a = Number(document.querySelector("input").value);
+var width = 100;
+for (let i = 0; i < a; i++) {
+var d = document.createElement("div");
+d.style.width = width + "px";
+width = width + 100;
+d.style.height = "100px";
+d.style.backgroundColor = "yellow";
+document.getElementById("step").appendChild(d);
+}
+}
+</script>
+</head>
+
+<body>
+<div class="box"></div>
+</div>
+<div class="outer-box">
+<div class="outer-box-1">
+<div class="outer-box-2">
+<div class="input"><input type="number" /></div>
+<div class="button">
+<button onclick="staircase()">click here</button>
+</div>
+</div>
+<div id="step"></div>
+</div>
+</div>
+</body>
+</html>

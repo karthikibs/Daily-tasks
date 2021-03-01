@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<title>Web Page Design</title>
+<body>
+    <input type="text" id="ab">
+    <input type="button" value="click" onclick="myFunction()">
+    <p id="age"></p>
+<script>    
+     function myFunction(){
+           var d = new Date();
+           var dy = d.getFullYear();
+           var useryear;
+           useryear = document.getElementById("ab").value;
+           var age = dy - useryear;
+           document.getElementById("age").innerHTML = "Your age is " +age;
+       }
+</script>
+</body>
+</html>

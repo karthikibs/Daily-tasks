@@ -1,0 +1,52 @@
+<html> 
+<head> 
+    <title>Auto complete using Pure Javascript</title> 
+</head> 
+<body> 
+    <input type="text" list="datalist" onkeyup="ac(this.value)"> 
+
+<datalist id="datalist"> 
+  
+<option value="Apple"></option> 
+<option value="orange"></option> 
+<option value="grape"></option> 
+<option value="agoda"></option> 
+<option value="olive"></option> 
+<option value="grunge"></option> 
+<option value="verso"></option> 
+<option value="mango"></option> 
+
+<script> 
+    var tags = [  
+    "Apple"
+    "orange", 
+    "grape", 
+    "agoda", 
+    "olive", 
+    "grunge", 
+    "verso", 
+    " mango", 
+
+      ]; 
+   var n= tags.length; 
+    function ac(value) { 
+        document.getElementById('datalist').innerHTML = ''; 
+           
+         l=value.length; 
+
+         for (var i = 0; i<n; i++) { 
+         if(((tags[i].toLowerCase()).indexOf(value.toLowerCase()))>-1) 
+         { 
+  
+             var node = document.createElement("option"); 
+             var val = document.createTextNode(tags[i]); 
+              node.appendChild(val); 
+  
+              document.getElementById("datalist").appendChild(node); 
+         } 
+     } 
+     } 
+</script>   
+</datalist> 
+</body> 
+</html>

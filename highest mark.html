@@ -1,0 +1,14 @@
+<html>
+<title>Web Page Design</title>
+<body>
+<script>
+    var arr = [90, 90, 40,5];
+    var m = Math.max(...arr);
+    var count = arr.reduce(arrayfunc, 0);
+    function arrayfunc(counter, value) {
+        return counter + (value === m);
+    }
+    console.log(count);
+</script>
+</body>
+</html>
